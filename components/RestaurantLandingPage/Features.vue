@@ -140,60 +140,22 @@
                 <v-icon>mdi-cart</v-icon>
                 Add to Cart
               </v-btn>
-
             </div>
           </div>
         </div>
       </v-col>
-      <!--
-            <v-col>
-              <div class="container">
-                <div class="card mx-auto">
-                  <div class="circle">
-                    <h2 class="yellow&#45;&#45;text">02</h2>
-                  </div>
-                  <div class="content mx-auto">
-                    <v-list dense class="list ">
-                      <v-list-item
-                        v-for="(item, i) in items"
-                        :key="i"
-                      ><v-list-item-content>
-                        <v-list-item-title v-text="item.text" style="border-bottom: 1px solid #ddd"></v-list-item-title>
-                      </v-list-item-content>
-                      </v-list-item>
-                    </v-list>
-                    <v-btn class="a yellow&#45;&#45;text">Buy Now</v-btn>
-                  </div>
-                </div>
-              </div>
-            </v-col>
-            <v-col>
-              <div class="container">
-                <div class="card mx-auto">
-                  <div class="circle">
-                    <h2 class="yellow&#45;&#45;text">03</h2>
-                  </div>
-                  <div class="content mx-auto">
-                    <v-list dense class="list ">
-                      <v-list-item
-                        v-for="(item, i) in items"
-                        :key="i"
-                      ><v-list-item-content>
-                        <v-list-item-title v-text="item.text" style="border-bottom: 1px solid #ddd"></v-list-item-title>
-                      </v-list-item-content>
-                      </v-list-item>
-                    </v-list>
-                    <v-btn class="a yellow&#45;&#45;text">Buy Now</v-btn>
-                  </div>
-                </div>
-              </div>
-            </v-col>-->
     </v-row>
+    <!--<v-card tile dense class="ma-16 pa-10">-->
+      <pricing-table/>
+<!--
+    </v-card>-->
   </section>
 </template>
 
 <script>
+import pricingTable from "@/components/pricingTable";
 export default {
+  components:{pricingTable},
   name: "LandingPageGetService",
   data: () => ({
     deleting: true,
@@ -215,7 +177,7 @@ export default {
       {title: 'Users', icon: 'mdi-account-group-outline'},
     ],
     country: ['Bangladesh', 'India', 'Nepal', 'Japan']
-  }),
+  })
 }
 </script>
 

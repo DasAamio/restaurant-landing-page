@@ -1,9 +1,9 @@
 <template>
   <v-app >
     <navbar/>
-    <v-content class="scroll">
+    <v-main>
       <nuxt/>
-    </v-content>
+    </v-main>
     <page-footer/>
   </v-app>
 </template>
@@ -14,20 +14,9 @@ import PageFooter from "../components/RestaurantLandingPage/PageFooter";
 
 
 export default {
-  name:"Restaurant Landing Page",
+  name:"RestaurantLandingPage",
   components:{Navbar,PageFooter}
 }
 </script>
 <style scoped>
-
-.scroll{
-  scroll-behavior: smooth;
-}
-.fade-enter, .fade-leave{
-  opacity: 0;
-  transform: translateY(-2em);
-}
-.fade-enter-active, .fade-leave-active{
-    transition: all .5s ease;
-}
 </style>
